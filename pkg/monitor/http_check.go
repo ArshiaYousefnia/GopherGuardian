@@ -14,14 +14,18 @@ type HttpChecker struct {
 }
 
 func (h *HttpChecker) Check() error {
-	resp, err := http.Get(h.AddressVal)
+	timeout := min(10*time.Second, h.IntervalVal)
+	client := http.Client{
+		Timeout: timeout,
+	}
+
+	resp, err := client.Head(h.AddressVal)
 	if err != nil {
 		return err
 	}
-
 	defer resp.Body.Close()
 
-	if resp.StatusCode != http.StatusOK {
+	if resp.StatusCode <= 200 || resp.StatusCode >= 300 {
 		return fmt.Errorf("http status code %d", resp.StatusCode)
 	}
 
