@@ -7,9 +7,15 @@ import (
 	"gopehrguardian/pkg/monitor"
 	"log"
 	"sync"
+
+	"github.com/joho/godotenv"
 )
 
 func main() {
+	err := godotenv.Load(".env")
+	if err != nil {
+		log.Fatal("Error loading .env file")
+	}
 	parsedFlags, err := flags.ParseFlags()
 	if err != nil {
 		log.Fatal(err)

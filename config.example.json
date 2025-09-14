@@ -6,7 +6,8 @@
       "address": "https://www.google.com",
       "interval": 1,
       "alert": {
-        "email": "tester@gmail.com"
+        "email": "tester@gmail.com",
+        "telegram": "3213232"
       }
     },
     {
@@ -15,7 +16,8 @@
       "address": "example.com:80",
       "interval": 1,
       "alert": {
-        "email": "tester@gmail.com"
+        "email": "tester@gmail.com",
+        "telegram": "3213232"
       }
     }
   ]
