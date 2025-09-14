@@ -1,0 +1,22 @@
+{
+  "targets": [
+    {
+      "name": "http test",
+      "type": "http",
+      "address": "https://www.google.com",
+      "interval": 1,
+      "alert": {
+        "email": "tester@gmail.com"
+      }
+    },
+    {
+      "name": "tcp test",
+      "type": "tcp",
+      "address": "example.com:80",
+      "interval": 1,
+      "alert": {
+        "email": "tester@gmail.com"
+      }
+    }
+  ]
+}

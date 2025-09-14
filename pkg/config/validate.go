@@ -18,7 +18,7 @@ func validateConfig(config *Config) error {
 	for i := range config.Targets {
 		err := validateTarget(&config.Targets[i])
 		if err != nil {
-			return fmt.Errorf("invalid target a index %d: %s", i, err.Error())
+			return fmt.Errorf("invalid target at index %d: %s", i, err.Error())
 		}
 	}
 

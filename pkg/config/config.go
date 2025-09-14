@@ -6,7 +6,7 @@ import (
 )
 
 type Config struct {
-	Targets []Target
+	Targets []Target `json:"targets"`
 }
 
 type Alert struct {
@@ -18,7 +18,7 @@ type Target struct {
 	Name     string `json:"name"`
 	Type     string `json:"type"`
 	Address  string `json:"address"`
-	Interval int32  `json:"interval"`
+	Interval int64  `json:"interval"`
 	Alert    *Alert `json:"alert"`
 }
 

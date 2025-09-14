@@ -25,7 +25,7 @@ func (h *HttpChecker) Check() error {
 	}
 	defer resp.Body.Close()
 
-	if resp.StatusCode <= 200 || resp.StatusCode >= 300 {
+	if resp.StatusCode < 200 || resp.StatusCode >= 300 {
 		return fmt.Errorf("http status code %d", resp.StatusCode)
 	}
 
