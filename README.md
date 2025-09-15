@@ -6,7 +6,7 @@ HTTP and TCP protocols are supported. Each endpoint is checked in a cycle and do
 
 On detection of a down endpoint, alert is sent. Normal delay metrcis are also logged to provide easier monitoring.
 
-Currently only Telegram Bot is supported for Alerting.
+Currently Email and Telegram Bot is supported for Alerting.
 
 ## Install and Build
 ```shell
