@@ -4,9 +4,9 @@ Gopher Guardian is a simple monitoring tool written in go
 
 HTTP and TCP protocols are supported. Each endpoint is checked in a cycle and downtimes and delays are detected.
 
-On detection of a down endpoint, alert is sent. Normal delay metrcis are also logged to provide easier monitoring.
+On detection of a down endpoint, alert is sent. Normal delay metrics are also logged to provide easier monitoring.
 
-Currently Email and Telegram Bot is supported for Alerting.
+Currently, Email and Telegram Bot is supported for Alerting.
 
 ## Install and Build
 ```shell
