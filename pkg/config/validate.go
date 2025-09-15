@@ -74,7 +74,7 @@ func validateAddress(address string, targetType string) error {
 
 func validateAlert(alert *Alert) error {
 	if alert.Email == "" && alert.Telegram == "" {
-		return fmt.Errorf("alert email or telegram is required")
+		return fmt.Errorf("alert via email or telegram is required")
 	}
 	return nil
 }
